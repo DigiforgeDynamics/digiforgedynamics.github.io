@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiforgeDynamics</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="https://ibb.co/8BMkKPt" alt="DigiforgeDynamics Logo" class="logo" />
+        </div>
+        <h1>DigiforgeDynamics</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            At DigiforgeDynamics, we believe that anyone can become a DIY expert with the right tools, resources, and guidance. Established in [Year], our mission is to empower individuals and families to take control of their home projects through affordable and high-quality DIY products.
+        </p>
+        <p>
+            Our team consists of passionate DIY enthusiasts who are dedicated to providing step-by-step tutorials, tips, and tricks to make your home improvement journey as smooth as possible. Whether you're a novice looking to tackle your first project or an experienced DIYer searching for advanced techniques, we have something for everyone.
+        </p>
+        <p>
+            We are committed to sustainability and strive to offer eco-friendly products that not only enhance your living space but also contribute to a healthier planet. Join us on this exciting journey of creativity and innovation!
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>
+            At DigiforgeDynamics, we offer a wide range of services to support your DIY needs:
+        </p>
+        <ul>
+            <li>
+                <strong>DIY Product Sales:</strong> We provide a curated selection of high-quality tools and materials designed for various home improvement projects. From hand tools to electrical supplies, we have everything you need.
+            </li>
+            <li>
+                <strong>Video Tutorials:</strong> Our step-by-step video guides make it easy for you to follow along and complete your projects with confidence. Each tutorial is designed to break down complex tasks into manageable steps.
+            </li>
+            <li>
+                <strong>Personalized Consultation:</strong> Not sure where to start? Our expert team offers personalized consultations to help you choose the right products and techniques for your specific projects.
+            </li>
+            <li>
+                <strong>Workshops and Events:</strong> Join us for hands-on workshops where you can learn new skills, meet fellow DIY enthusiasts, and create amazing projects together. Stay tuned for upcoming events in your area!
+            </li>
+            <li>
+                <strong>Customer Support:</strong> Our dedicated customer service team is always here to assist you. Whether you have questions about a product, need help with an order, or want advice on a project, we’re just a message away.
+            </li>
+        </ul>
+        <p>
+            Explore our services and discover how DigiforgeDynamics can help you bring your DIY ideas to life!
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="button" id="send-otp">Send OTP</button>
+            <div id="otp-container">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" />
+                <button type="button" id="verify-otp">Verify OTP</button>
+            </div>
+
+            <p id="form-status"></p>
+        </form>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
