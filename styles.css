@@ -37,10 +37,12 @@ header {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Ensure the width and height are equal for a perfect circle */
+    border-radius: 50%; /* This makes the logo circular */
+    object-fit: cover; /* Ensures the logo image fills the circle without distortion */
 }
+
 
 header h1 {
     font-size: 24px;
