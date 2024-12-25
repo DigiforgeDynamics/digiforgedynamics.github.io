@@ -14,6 +14,9 @@
 
     <header class="sticky-header">
         <div class="logo-container">
+    
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
             <a href="#home">
                 <img src="https://i.ibb.co/545b7mr/image.png" alt="DigiforgeDynamics Logo" class="logo" />
             </a>
@@ -88,6 +91,13 @@
     <footer>
         <p>&copy; 2024 DigiforgeDynamics. All rights reserved.</p>
     </footer>
+
+    <script>
+    function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+    }
+</script>
 
 </body>
 </html>
