@@ -75,11 +75,13 @@ nav ul li.dropdown:hover .dropdown-content {
 .dropdown-content {
     display: none;
     position: absolute;
+    left: -30px; /* Adjusted to move the buttons left by 2-3cm */
     background-color: #1a1a1a;
     min-width: 160px;
     z-index: 100;
     border-radius: 5px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 /* Dropdown Button Styles */
@@ -87,8 +89,8 @@ nav ul li.dropdown:hover .dropdown-content {
     color: #fff;
     padding: 10px 16px;
     display: block;
-    width: 100%; /* Ensure the button takes up the full width */
-    text-align: center; /* Align text to the center */
+    width: 100%;
+    text-align: center;
     background: linear-gradient(45deg, #00bcd4, #00ff99); /* Apply gradient background */
     border: none;
     border-radius: 5px;
