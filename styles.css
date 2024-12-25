@@ -1,66 +1,4 @@
-
-html {
-    scroll-padding-top: 80px; /* Adjust this to match the height of your header */
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #111;
-    color: #fff;
-    line-height: 1.6;
-    overflow-x: hidden;
-    scroll-behavior: smooth; /* Smooth scroll behavior */
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(45deg, #00bcd4, #00ff99);
-    border-bottom: 2px solid #fff;
-    position: sticky; /* Keeps header fixed at top while scrolling */
-    top: 0; /* Fixes it to the top */
-    z-index: 10; /* Ensures it stays on top */
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hides the default navigation on small screens */
-        flex-direction: column; /* Stacks the items vertically */
-        position: absolute;
-        top: 80px; /* Adjust for the height of the header */
-        left: 0;
-        width: 100%;
-        background-color: #111;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    nav ul li a {
-        font-size: 18px;
-    }
-
-    nav ul li a:hover {
-        color: #00ff99;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    nav ul.show {
-        display: flex; /* Show the menu when toggled */
-    }
-}
-
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -73,6 +11,7 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scroll behavior */
 }
 
 h1, h2, h3 {
@@ -84,20 +23,20 @@ a {
     color: #fff;
 }
 
-/* Sticky Header */
-.sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: linear-gradient(45deg, #00bcd4, #00ff99);
-    padding: 20px;
+/* Header Styles */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #00bcd4, #00ff99);
     border-bottom: 2px solid #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-/* Logo */
+/* Logo Container */
 .logo-container {
     display: flex;
     align-items: center;
@@ -106,11 +45,9 @@ a {
 .logo {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
     margin-right: 10px;
-    border-radius: 50%; /* This makes the logo circular */
-    object-fit: cover;  /* Ensures the image doesn't stretch */
 }
-
 
 header h1 {
     font-size: 24px;
@@ -118,54 +55,50 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigation Menu */
+/* Navigation Styles */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
 }
 
 nav ul li {
     margin-left: 20px;
+    position: relative; /* Needed for dropdown */
 }
 
-nav ul li a, .nav-item {
+nav ul li a {
     font-size: 18px;
     color: #fff;
     transition: color 0.3s ease;
 }
 
-/* Hover Effect for Navigation Items */
-nav ul li a:hover, .nav-item:hover {
+nav ul li a:hover {
     color: #00ff99;
 }
 
 /* Dropdown Menu */
-.dropdown {
-    position: relative;
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #1a1a1a;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
+    color: #fff;
+    padding: 10px 16px;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #575757;
+    background-color: #00ff99;
 }
 
 /* Hero Section */
@@ -178,7 +111,7 @@ nav ul li a:hover, .nav-item:hover {
     text-align: center;
     color: white;
     padding: 0 20px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff; /* White line between hero and next section */
 }
 
 .hero-content h2 {
@@ -205,42 +138,26 @@ nav ul li a:hover, .nav-item:hover {
     background-color: #00bcd4;
 }
 
-/* General Section Styling */
-section {
+/* About Us Section */
+.about, .services, .contact {
     padding: 60px 20px;
     border-bottom: 2px solid #fff;
-    background: #1a1a1a;
-}
-
-.about, .services, .contact {
     background-color: #1a1a1a;
 }
 
-/* Navigation Highlight with Gradient */
-.nav-item:hover {
-    color: white;
-    background: linear-gradient(45deg, #00bcd4, #00ff99);
+.services .service-item {
+    margin-bottom: 20px;
 }
 
-/* Services Section */
 .services h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
-}
-
-.service-item {
-    margin-bottom: 20px;
 }
 
 .service-item h3 {
     font-size: 1.5em;
 }
 
-.service-item p {
-    font-size: 1.2em;
-}
-
-/* Contact Form Styles */
 .contact form input,
 .contact form textarea {
     width: 100%;
@@ -263,12 +180,17 @@ section {
     background-color: #00bcd4;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
     background: #111;
     color: #888;
+}
+
+/* Prevent Over-scrolling and Adjust Header Visibility */
+html {
+    scroll-padding-top: 80px; /* Adjust this to match the height of your header */
 }
 
 /* Responsive Design */
@@ -277,22 +199,28 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
     nav ul {
         flex-direction: column;
         align-items: center;
     }
+
     nav ul li {
         margin: 10px 0;
     }
+
     .hero-content h2 {
         font-size: 2.5em;
     }
+
     .hero-content p {
         font-size: 1.2em;
     }
+
     .services h2 {
         font-size: 2.2em;
     }
+
     .service-item h3 {
         font-size: 1.4em;
     }
