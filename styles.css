@@ -11,29 +11,23 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
+/* Header Styles */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background: linear-gradient(45deg, #00bcd4, #00ff99);
     border-bottom: 2px solid #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
+/* Logo Container */
 .logo-container {
     display: flex;
     align-items: center;
@@ -42,8 +36,8 @@ header {
 .logo {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 header h1 {
@@ -52,10 +46,15 @@ header h1 {
     font-weight: bold;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
 }
 
 nav ul li a {
@@ -65,52 +64,42 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00ff99;
+    color: #fff; /* Change to white on hover */
 }
 
-/* Dropdown Styling Fix */
+/* Dropdown Menu */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .dropdown-content {
-    position: absolute;
-    top: 100%;
-    right: 0; /* Aligns the dropdown content under "Get Started" */
-    background-color: #00bcd4; /* Matches the hero background */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     display: none;
-    overflow: hidden;
-    padding: 5px 0; /* Ensures proper spacing between the buttons */
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
+/* Dropdown Button Styles */
 .dropdown-content a {
-    display: block;
-    padding: 10px 20px;
     color: #fff;
-    text-align: center;
-    background-color: #00bcd4; /* Matches hero section gradient */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 16px;
+    display: block;
+    width: 100%; /* Ensure the button takes up the full width */
+    text-align: center; /* Align text to the center */
+    background: linear-gradient(45deg, #00bcd4, #00ff99); /* Apply gradient background */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #00ff99; /* Highlights on hover */
-    color: #fff;
+    background-color: #00ff99; /* Change color on hover */
 }
 
-/* Remove black outline from buttons */
-.dropdown-content a:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Alignment & Consistency */
-.dropdown-content a:first-child {
-    margin-bottom: 5px; /* Adds spacing between Login and Signup */
-}
-
-
+/* Hero Section */
 .hero {
     height: 80vh;
     background: linear-gradient(45deg, #00bcd4, #00ff99);
@@ -141,20 +130,16 @@ nav ul li a:hover {
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    color: #fff;
-    border-radius: 5px;
 }
 
 .hero button:hover {
     background-color: #00bcd4;
 }
 
-section {
+/* About Us Section */
+.about, .services, .contact {
     padding: 60px 20px;
     border-bottom: 2px solid #fff;
-}
-
-.about, .services, .contact {
     background-color: #1a1a1a;
 }
 
@@ -193,6 +178,7 @@ section {
     background-color: #00bcd4;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
@@ -200,60 +186,297 @@ footer {
     color: #888;
 }
 
-header .dropdown-content a,
-.hero button {
-    width: fit-content;
+/* Prevent Over-scrolling and Adjust Header Visibility */
+html {
+    scroll-padding-top: 80px;
 }
 
-/* Adjust the login and signup buttons alignment */
-.dropdown-content {
-    right: 2rem; /* Adjust dropdown menu position */
-}
-
-.dropdown-content a {
-    width: auto;
-    text-align: center;
-}
-
-/* Remove black outline from buttons */
-.dropdown-content a:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Responsive Design */
+//* Mobile Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
+        padding: 10px 20px; /* Reduce padding for better fit */
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        position: absolute; /* Fix position when shown */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #111; /* Match background color */
+        z-index: 1000;
     }
 
     nav ul li {
         margin: 10px 0;
+        width: 100%;
+        text-align: center; /* Ensure text is centered */
     }
 
-    .hero-content h2 {
-        font-size: 2.5em;
+    nav ul li a {
+        font-size: 1.2em; /* Slightly increase font size for better readability */
     }
 
-    .hero-content p {
-        font-size: 1.2em;
+    nav ul li a:hover {
+        color: #00bcd4; /* Change hover effect color */
     }
 
-    .services h2 {
-        font-size: 2.2em;
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+        background-color: #00bcd4; /* Button color */
+        border: none;
+        padding: 10px;
+        font-size: 1.5em;
+        color: white;
+        cursor: pointer;
     }
 
-    .service-item h3 {
-        font-size: 1.4em;
+    nav ul.show {
+        display: block; /* Show the menu when 'show' class is added */
+    }
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #00bcd4, #00ff99);
+    border-bottom: 2px solid #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff; /* Change to white on hover */
+}
+
+/* Dropdown Menu */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Button Styles */
+.dropdown-content a {
+    color: #fff;
+    padding: 10px 16px;
+    display: block;
+    width: 100%; /* Ensure the button takes up the full width */
+    text-align: center; /* Align text to the center */
+    background: linear-gradient(45deg, #00bcd4, #00ff99); /* Apply gradient background */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #00ff99; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(45deg, #00bcd4, #00ff99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    border-bottom: 2px solid #fff;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #00ff99;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #00bcd4;
+}
+
+/* About Us Section */
+.about, .services, .contact {
+    padding: 60px 20px;
+    border-bottom: 2px solid #fff;
+    background-color: #1a1a1a;
+}
+
+.services .service-item {
+    margin-bottom: 20px;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #00ff99;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #00bcd4;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #888;
+}
+
+/* Prevent Over-scrolling and Adjust Header Visibility */
+html {
+    scroll-padding-top: 80px;
+}
+
+//* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px; /* Reduce padding for better fit */
     }
 
-    .dropdown-content {
-        right: 0; /* Center dropdown for small screens */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        position: absolute; /* Fix position when shown */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #111; /* Match background color */
+        z-index: 1000;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center; /* Ensure text is centered */
+    }
+
+    nav ul li a {
+        font-size: 1.2em; /* Slightly increase font size for better readability */
+    }
+
+    nav ul li a:hover {
+        color: #00bcd4; /* Change hover effect color */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+        background-color: #00bcd4; /* Button color */
+        border: none;
+        padding: 10px;
+        font-size: 1.5em;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav ul.show {
+        display: block; /* Show the menu when 'show' class is added */
     }
 }
