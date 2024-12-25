@@ -64,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00ff99;
+    color: #fff; /* Change to white on hover */
 }
 
 /* Dropdown Menu */
@@ -191,7 +191,7 @@ html {
     scroll-padding-top: 80px;
 }
 
-/* Responsive Design */
+/* Mobile Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -201,10 +201,12 @@ html {
     nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     nav ul li {
         margin: 10px 0;
+        width: 100%;
     }
 
     .hero-content h2 {
