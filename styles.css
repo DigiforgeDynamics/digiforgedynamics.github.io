@@ -45,7 +45,10 @@ a {
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    border-radius: 50%; /* This makes the logo circular */
+    object-fit: cover;  /* Ensures the image doesn't stretch */
 }
+
 
 header h1 {
     font-size: 24px;
