@@ -1,4 +1,63 @@
 /* Global Styles */
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scroll behavior */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #00bcd4, #00ff99);
+    border-bottom: 2px solid #fff;
+    position: sticky; /* Keeps header fixed at top while scrolling */
+    top: 0; /* Fixes it to the top */
+    z-index: 10; /* Ensures it stays on top */
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hides the default navigation on small screens */
+        flex-direction: column; /* Stacks the items vertically */
+        position: absolute;
+        top: 80px; /* Adjust for the height of the header */
+        left: 0;
+        width: 100%;
+        background-color: #111;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        color: #00ff99;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when toggled */
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
