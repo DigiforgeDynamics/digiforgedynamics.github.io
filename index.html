@@ -14,14 +14,14 @@
         <div class="logo-container">
             <img src="https://i.ibb.co/545b7mr/image.png" alt="DigiforgeDynamics Logo" class="logo" />
             <h1>DigiforgeDynamics</h1>
-         </div>
-</header>
-    <nav> 
+        </div>
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!-- Dropdown for Login and Signup -->
                 <li class="dropdown">
                     <a href="#">Get Started</a>
                     <ul class="dropdown-content">
@@ -33,6 +33,7 @@
         </nav>
     </header>
 
+    <!-- Content Sections -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>"Unleash Your Creativity with the Right Tools"</h2>
@@ -57,9 +58,9 @@
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-            <textarea name="message" placeholder="Your Message" rows="4" required aria-label="Your Message"></textarea>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
