@@ -1,5 +1,8 @@
-/* Global Styles */
-/* Global styles */
+
+html {
+    scroll-padding-top: 80px; /* Adjust this to match the height of your header */
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #111;
