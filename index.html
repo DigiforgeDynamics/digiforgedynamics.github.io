@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DigiforgeDynamics - Empowering DIY enthusiasts with the right tools, resources, and guidance for home improvement projects.">
-    <meta name="keywords" content="DIY, home improvement, tools, tutorials, workshops, products, customer support">
-    <meta name="author" content="DigiforgeDynamics Team">
-    <title>DigiforgeDynamics - DIY Tools & Tutorials</title>
+    <title>DigiforgeDynamics</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="sticky-header">
+    <header>
         <div class="logo-container">
-    
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-            <a href="#home">
-                <img src="https://i.ibb.co/545b7mr/image.png" alt="DigiforgeDynamics Logo" class="logo" />
-            </a>
+            <img src="https://i.ibb.co/545b7mr/image.png" alt="DigiforgeDynamics Logo" class="logo">
             <h1>DigiforgeDynamics</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#home" class="nav-item">Home</a></li>
-                <li><a href="#about-us" class="nav-item">About Us</a></li>
-                <li><a href="#services" class="nav-item">Services</a></li>
-                <li><a href="#contact" class="nav-item">Contact</a></li>
-                <!-- Dropdown for Get Started -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Dropdown Menu -->
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Get Started</a>
-                    <div class="dropdown-content">
-                        <a href="#login">Login</a>
-                        <a href="#signup">Signup</a>
-                    </div>
+                    <a href="#">Get Started</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#signup">Signup</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -80,10 +73,10 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post" role="form">
-            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-            <textarea name="message" placeholder="Your Message" rows="4" required aria-label="Your Message"></textarea>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -91,13 +84,6 @@
     <footer>
         <p>&copy; 2024 DigiforgeDynamics. All rights reserved.</p>
     </footer>
-
-    <script>
-    function toggleMenu() {
-        const nav = document.querySelector('nav ul');
-        nav.classList.toggle('show');
-    }
-</script>
 
 </body>
 </html>
