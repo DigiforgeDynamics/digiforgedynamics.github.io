@@ -68,19 +68,17 @@ nav ul li a:hover {
     color: #00ff99;
 }
 
-.dropdown {
-    position: relative;
-}
-
+/* Dropdown Styling Fix */
 .dropdown-content {
     position: absolute;
     top: 100%;
-    right: 0;
-    background-color: #00bcd4;
+    right: 0; /* Aligns the dropdown content under "Get Started" */
+    background-color: #00bcd4; /* Matches the hero background */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     display: none;
     overflow: hidden;
+    padding: 5px 0; /* Ensures proper spacing between the buttons */
 }
 
 .dropdown:hover .dropdown-content {
@@ -91,14 +89,27 @@ nav ul li a:hover {
     display: block;
     padding: 10px 20px;
     color: #fff;
-    text-align: left;
+    text-align: center;
+    background-color: #00bcd4; /* Matches hero section gradient */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background: #00ff99;
+    background-color: #00ff99; /* Highlights on hover */
     color: #fff;
 }
+
+/* Remove black outline from buttons */
+.dropdown-content a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Alignment & Consistency */
+.dropdown-content a:first-child {
+    margin-bottom: 5px; /* Adds spacing between Login and Signup */
+}
+
 
 .hero {
     height: 80vh;
