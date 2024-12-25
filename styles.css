@@ -63,7 +63,7 @@ nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+nav ul li a, .nav-item {
     font-size: 18px;
     color: #fff;
     transition: color 0.3s ease;
@@ -144,25 +144,38 @@ nav ul li a:hover, .nav-item:hover {
 section {
     padding: 60px 20px;
     border-bottom: 2px solid #fff;
+    background: #1a1a1a;
 }
 
 .about, .services, .contact {
     background-color: #1a1a1a;
 }
 
-.services .service-item {
-    margin-bottom: 20px;
+/* Navigation Highlight with Gradient */
+.nav-item:hover {
+    color: white;
+    background: linear-gradient(45deg, #00bcd4, #00ff99);
 }
 
+/* Services Section */
 .services h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
+}
+
+.service-item {
+    margin-bottom: 20px;
 }
 
 .service-item h3 {
     font-size: 1.5em;
 }
 
+.service-item p {
+    font-size: 1.2em;
+}
+
+/* Contact Form Styles */
 .contact form input,
 .contact form textarea {
     width: 100%;
@@ -185,6 +198,7 @@ section {
     background-color: #00bcd4;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
