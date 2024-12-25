@@ -11,16 +11,7 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-    scroll-behavior: smooth; /* Smooth scroll behavior */
-}
-
-h1, h2, h3 {
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
+    scroll-behavior: smooth;
 }
 
 /* Header Styles */
@@ -63,7 +54,7 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
-    position: relative; /* Needed for dropdown */
+    position: relative;
 }
 
 nav ul li a {
@@ -91,14 +82,21 @@ nav ul li.dropdown:hover .dropdown-content {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Dropdown Button Styles */
 .dropdown-content a {
     color: #fff;
     padding: 10px 16px;
     display: block;
+    width: 100%; /* Ensure the button takes up the full width */
+    text-align: center; /* Align text to the center */
+    background: linear-gradient(45deg, #00bcd4, #00ff99); /* Apply gradient background */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #00ff99;
+    background-color: #00ff99; /* Change color on hover */
 }
 
 /* Hero Section */
@@ -111,7 +109,7 @@ nav ul li.dropdown:hover .dropdown-content {
     text-align: center;
     color: white;
     padding: 0 20px;
-    border-bottom: 2px solid #fff; /* White line between hero and next section */
+    border-bottom: 2px solid #fff;
 }
 
 .hero-content h2 {
@@ -190,7 +188,7 @@ footer {
 
 /* Prevent Over-scrolling and Adjust Header Visibility */
 html {
-    scroll-padding-top: 80px; /* Adjust this to match the height of your header */
+    scroll-padding-top: 80px;
 }
 
 /* Responsive Design */
