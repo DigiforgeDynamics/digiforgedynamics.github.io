@@ -11,31 +11,23 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Sticky Header */
-.sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: linear-gradient(45deg, #00bcd4, #00ff99);
-    padding: 20px;
+/* Header Styles */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #00bcd4, #00ff99);
     border-bottom: 2px solid #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-/* Logo */
+/* Logo Container */
 .logo-container {
     display: flex;
     align-items: center;
@@ -44,6 +36,7 @@ a {
 .logo {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
     margin-right: 10px;
 }
 
@@ -53,54 +46,57 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigation Menu */
+/* Navigation Styles */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
 }
 
 nav ul li {
     margin-left: 20px;
+    position: relative;
 }
 
-nav ul li a, .nav-item {
+nav ul li a {
     font-size: 18px;
     color: #fff;
     transition: color 0.3s ease;
 }
 
-/* Hover Effect for Navigation Items */
-nav ul li a:hover, .nav-item:hover {
-    color: #00ff99;
+nav ul li a:hover {
+    color: #fff; /* Change to white on hover */
 }
 
 /* Dropdown Menu */
-.dropdown {
-    position: relative;
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #1a1a1a;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
+/* Dropdown Button Styles */
 .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
+    color: #fff;
+    padding: 10px 16px;
     display: block;
+    width: 100%; /* Ensure the button takes up the full width */
+    text-align: center; /* Align text to the center */
+    background: linear-gradient(45deg, #00bcd4, #00ff99); /* Apply gradient background */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #575757;
+    background-color: #00ff99; /* Change color on hover */
 }
 
 /* Hero Section */
@@ -140,42 +136,26 @@ nav ul li a:hover, .nav-item:hover {
     background-color: #00bcd4;
 }
 
-/* General Section Styling */
-section {
+/* About Us Section */
+.about, .services, .contact {
     padding: 60px 20px;
     border-bottom: 2px solid #fff;
-    background: #1a1a1a;
-}
-
-.about, .services, .contact {
     background-color: #1a1a1a;
 }
 
-/* Navigation Highlight with Gradient */
-.nav-item:hover {
-    color: white;
-    background: linear-gradient(45deg, #00bcd4, #00ff99);
+.services .service-item {
+    margin-bottom: 20px;
 }
 
-/* Services Section */
 .services h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
-}
-
-.service-item {
-    margin-bottom: 20px;
 }
 
 .service-item h3 {
     font-size: 1.5em;
 }
 
-.service-item p {
-    font-size: 1.2em;
-}
-
-/* Contact Form Styles */
 .contact form input,
 .contact form textarea {
     width: 100%;
@@ -198,7 +178,7 @@ section {
     background-color: #00bcd4;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
@@ -206,28 +186,41 @@ footer {
     color: #888;
 }
 
-/* Responsive Design */
+/* Prevent Over-scrolling and Adjust Header Visibility */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
     }
+
     nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
+
     nav ul li {
         margin: 10px 0;
+        width: 100%;
     }
+
     .hero-content h2 {
         font-size: 2.5em;
     }
+
     .hero-content p {
         font-size: 1.2em;
     }
+
     .services h2 {
         font-size: 2.2em;
     }
+
     .service-item h3 {
         font-size: 1.4em;
     }
