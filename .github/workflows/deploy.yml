@@ -1,0 +1,35 @@
+name: Deploy Website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout private repository
+        uses: actions/checkout@v3
+        with:
+          repository: 'digiforgedynamics/digiforgedynamics.github.io'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js (if you're using npm)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # change the version based on your project
+
+      - name: Build project (if necessary)
+        run: |
+          npm install
+          npm run build  # adjust this according to your build process
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main  # the branch you want to deploy to (typically 'main' or 'gh-pages')
+          folder: build  # change this if you're not building (e.g., just deploy 'public' or root)
+          repository-name: digiforgedynamics/digiforgedynamics.github.io 
+          token: ${{ secrets.GITHUB_TOKEN }}
