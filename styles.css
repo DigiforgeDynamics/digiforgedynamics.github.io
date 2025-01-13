@@ -101,7 +101,7 @@ nav ul li.dropdown:hover .dropdown-content {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
+    height: 85vh;
     background: linear-gradient(45deg, #00bcd4, #00ff99);
     display: flex;
     justify-content: center;
