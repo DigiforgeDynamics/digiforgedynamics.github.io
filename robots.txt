@@ -1,0 +1,3 @@
+  User-agent: *
+Allow: /
+Sitemap: https://digiforgedynamics.github.io/sitemap.xml
