@@ -1,71 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="index, follow">
-<meta name="description" content="DigiforgeDynamics - Empowering DIY enthusiasts with cutting-edge tools and resources.">
-<meta name="keywords" content="DIY, projects, tutorials, games, learning, DigiforgeDynamics, Digiforge, Jenson, Jenson Vivish">
-<meta name="author" content="DigiforgeDynamics">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-    <meta name="google-site-verification" content="dmiS-jNmvesTB1w9suFJNjwCWrVjn9-3r7kpdpGZp7Q" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="DigiforgeDynamics - Empowering DIYers with premium tools, tutorials, and inspiration." />
+  <meta name="keywords" content="DIY, tools, projects, DigiforgeDynamics, Jenson" />
+  <meta name="author" content="DigiforgeDynamics" />
+  <title>DigiforgeDynamics</title>
+  <link rel="icon" href="https://i.ibb.co/zH1mNdS/cropped-image.png" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-    <meta name="description" content="DigiforgeDynamics - Empowering DIY enthusiasts with the right tools, resources, and guidance for home improvement projects.">
-    <title>DigiforgeDynamics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://i.ibb.co/zH1mNdS/cropped-image.png" type="image/x-icon">
-<link rel="shortcut icon" href=https://i.ibb.co/zH1mNdS/cropped-image.png" type="image/x-icon">
+<body class="bg-gray-950 text-white font-sans">
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <!-- Header -->
+  <header class="flex items-center justify-between p-4 bg-gradient-to-r from-gray-900 to-gray-800 sticky top-0 z-50">
+    <div class="flex items-center space-x-2">
+      <img src="https://i.ibb.co/545b7mr/image.png" alt="Logo" class="w-10 h-10 rounded-full">
+      <h1 class="text-xl font-bold">DigiforgeDynamics</h1>
+    </div>
+    <nav class="hidden md:flex space-x-6 text-lg">
+      <a href="#home" class="hover:text-emerald-400">Home</a>
+      <a href="#about" class="hover:text-emerald-400">About</a>
+      <a href="#services" class="hover:text-emerald-400">Services</a>
+      <a href="#contact" class="hover:text-emerald-400">Contact</a>
+      <a href="https://externaltools.com" target="_blank" class="hover:text-emerald-400">Tools</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden text-white text-2xl">&#9776;</button>
+  </header>
 
-    <header>
-        <div class="logo-container">
-            <img src="https://i.ibb.co/545b7mr/image.png" alt="DigiforgeDynamics Logo" class="logo" />
-            <h1>DigiforgeDynamics</h1>
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-gray-900 transform translate-x-full transition-transform duration-300 shadow-lg z-50">
+    <div class="p-4 flex items-center justify-between border-b border-gray-700">
+      <div class="flex items-center space-x-2">
+        <img src="https://i.ibb.co/545b7mr/image.png" alt="Logo" class="w-8 h-8 rounded-full">
+        <h2 class="text-lg font-bold">DigiforgeDynamics</h2>
+      </div>
+      <button id="close-btn" class="text-white text-2xl">&times;</button>
+    </div>
+    <ul id="sidebar-menu" class="p-4 space-y-4 text-lg">
+      <li><a href="#home" class="hover:text-emerald-400 block">Home</a></li>
+      <li><a href="#about" class="hover:text-emerald-400 block">About</a></li>
+      <li><a href="#services" class="hover:text-emerald-400 block">Services</a></li>
+      <li><a href="#contact" class="hover:text-emerald-400 block">Contact</a></li>
+      <li><a href="https://externaltools.com" target="_blank" class="hover:text-emerald-400 block">Tools</a></li>
+    </ul>
+  </aside>
+
+  <!-- Hero -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 to-gray-950 px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Unleash Your Creativity</h2>
+    <p class="text-lg md:text-xl max-w-xl mb-6 text-gray-300">Empowering DIYers with premium tools, tutorials, and inspiration.</p>
+    <a href="https://digiforgedynamics.github.io/Explore-more/" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3 rounded-xl transition font-semibold">Explore Now</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-gray-300">At DigiforgeDynamics, we believe anyone can become a DIY expert with the right tools and guidance. Our mission is to empower makers with high-quality products and expert resources.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 px-6 bg-gray-950">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">DIY Product Sales</h3>
+          <p class="text-gray-300">Top-rated tools and materials curated for your projects.</p>
         </div>
-
-    </header>
-
-    <!-- Content Sections -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>"Unleash Your Creativity with the Right Tools"</h2>
-            <p>DigiforgeDynamics empowers you to take control of your DIY projects with high-quality tools and expert guidance.</p>
-            <button onclick="location.href='https://digiforgedynamics.github.io/Explore-more/'">Explore Now</button>
-
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Custom DIY Guides</h3>
+          <p class="text-gray-300">Step-by-step plans tailored to your skills and goals.</p>
         </div>
-    </section>
-
-    <section id="about-us" class="about">
-        <h2>About Us</h2>
-        <p>At DigiforgeDynamics, we believe that anyone can become a DIY expert with the right tools, resources, and guidance. Our mission is to empower individuals and families to take control of their home projects through affordable and high-quality DIY products.</p>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>DIY Product Sales</h3>
-            <p>Curated selection of tools and materials for your projects. From hand tools to electrical supplies, we have it all.</p>
+        <div class="bg-gray-800 p-6 rounded-lg shadow md:col-span-2">
+          <h3 class="text-xl font-semibold mb-2">1-on-1 Consulting</h3>
+          <p class="text-gray-300">Talk to our experts and bring your ideas to life with confidence.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-gray-900">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none"/>
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none"/>
+        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none"></textarea>
+        <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 px-6 py-3 rounded-xl font-semibold transition">Send Message</button>
+        <p id="formMessage" class="mt-3 text-green-400 hidden">✅ Successfully Submitted!</p>
+      </form>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 DigiforgeDynamics. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-950 text-center text-sm text-gray-500">
+    &copy; 2024 DigiforgeDynamics. All rights reserved.
+  </footer>
 
+  <!-- JS -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+    const sidebarMenu = document.getElementById('sidebar-menu');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.remove('translate-x-full');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('translate-x-full');
+    });
+
+    sidebarMenu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        sidebar.classList.add('translate-x-full');
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('formMessage').classList.remove('hidden');
+      this.reset();
+      setTimeout(() => {
+        document.getElementById('formMessage').classList.add('hidden');
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
